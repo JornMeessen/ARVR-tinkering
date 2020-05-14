@@ -9,13 +9,14 @@
 <body>
   <a-scene embedded arjs>
     <a-entity scale=".2 .2 .2"></a-entity>
-    <a-box id="myBox"
+    <!-- <a-box id="myBox"
         width="1"
         height="1"
         depth="2"
         color="#BBAA33"
         position="0 0 -5">
-      </a-box>
+      </a-box> -->
+      <a-entity gltf-model="models/BagChair.gltf" position="0 0 -5"></a-entity>
       <a-marker-camera preset="hiro"></a-marker-camera>
   </a-scene>
 </body>
