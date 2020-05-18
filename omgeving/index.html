@@ -10,6 +10,18 @@
   </head>
   <body>
     <a-scene>
+
+    	<a-camera>
+        <a-entity id="mouseCursor"
+          cursor="fuse: true; fuseTimeout: 1500">
+        </a-entity>
+        <a-ring id="cursorRing" 
+          position="0 0 -1"
+          radius-inner= "0.02"
+          radius-outer= "0.03"
+          material="color: orange; shader: flat">
+        </a-ring>
+      </a-camera>
       
     	<a-entity environment="preset: egypt"></a-entity>
 
@@ -19,7 +31,36 @@
 
       <a-entity gltf-model="#tree" position="0 0 -4"></a-entity>
 
+
+
+
+      <!-- Anchors. -->
+      <a-entity mixin="marker" position="-2.5 1 0.01"></a-entity>
+      <a-entity position="-2.5 1 0"
+                text="anchor: left; width: 1.5; color: white; value: [LEFT ANCHOR] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+      </a-entity>
+      <a-entity mixin="marker" position="0 1 0.01"></a-entity>
+      <a-entity position="0 1 0"
+                text="anchor: center; width: 1.5; color: white; value: [CENTER ANCHOR] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+      </a-entity>
+      <a-entity mixin="marker" position="2.5 1 0.01"></a-entity>
+      <a-entity position="2.5 1 0"
+                text="anchor: right; width: 1.5; color: white; value: [RIGHT ANCHOR] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+      </a-entity>
+
+
+    <a-entity position="0 1.8 2">
+    	<a-entity camera look-controls wasd-controls></a-entity>
+    </a-entity>
       
     </a-scene>
   </body>
 </html>
+
+
+
+   
+
+
+  
+ 
